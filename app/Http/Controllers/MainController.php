@@ -11,47 +11,52 @@ class MainController extends Controller
         return view('about');
     }
 
-    function array(): View
+    function array()
     {
         $array = array();
         $array = [];
+
         $array2 = 'Juan';
         $array2 = 'Pepe';
         $array2 = 'Maria';
-        $array2[10] = 'Elisabeth';
         $array2 = 'Maria';
+
         $array3 = ['Juan', 'Pepe', 'Maria'];
-        $alumnos = [   
-            'Ajarif Saika, Fátima',
-            'Albarrán Joya, Antonio',
-            'Burgos Tomé, Adrián',
-            'Castillo García, Joaquín',
-            'Carrascosa Delgado, Pablo',
-            'Fernández Álvarez, Adrián',
-            'El Issmail Al Assaf, Amara',
-            'García González, Ignacio',
-            'Galdón Fernández, Abraham',
-            'Gorlat Castro, Raúl',
-            'Hernández Recio, Iván',
-            'Kordass Rjaf-Allah, Noussayr',
-            'Maldonado Navarro, Manuel',
-            'Montero Pelegrina, Pedro',
-            'Montoro Ruiz, Alba',
-            'Pérez Montalbán, Christian',
-            'Sánchez Sorroche, José',
-            'Serrano Rodríguez, Pablo',
-            'Vereda Orozco, Gonzalo Jesús',
-            'Vicaria García, Francisco Javier',
-            'Vilar Martín, Blas',
-            'Villegas Rivera, Luis',
-            'García López, Pilar',
+
+        $alumnos = [
+            ['nombre' => 'Ajarif Saika, Fátima', 'edad' => 20],
+            ['nombre' => 'Albarrán Joya, Antonio', 'edad' => 21],
+            ['nombre' => 'Burgos Tomé, Adrián', 'edad' => 20],
+            ['nombre' => 'Castillo García, Joaquín', 'edad' => 20],
+            ['nombre' => 'Carrascosa Delgado, Pablo', 'edad' => 20],
+            ['nombre' => 'Fernández Álvarez, Adrián', 'edad' => 19],
+            ['nombre' => 'El Issmail Al Assaf, Amara', 'edad' => 20],
+            ['nombre' => 'García González, Ignacio', 'edad' => 19],
+            ['nombre' => 'Galdón Fernández, Abraham', 'edad' => 20],
+            ['nombre' => 'Gorlat Castro, Raúl', 'edad' => 19],
+            ['nombre' => 'Hernández Recio, Iván', 'edad' => 29],
+            ['nombre' => 'Kordass Rjaf-Allah, Noussayr', 'edad' => 19],
+            ['nombre' => 'Maldonado Navarro, Manuel', 'edad' => 20],
+            ['nombre' => 'Montero Pelegrina, Pedro', 'edad' => 21],
+            ['nombre' => 'Montoro Ruiz, Alba', 'edad' => 19],
+            ['nombre' => 'Pérez Montalbán, Christian', 'edad' => 19],
+            ['nombre' => 'Sánchez Sorroche, José', 'edad' => 19],
+            ['nombre' => 'Serrano Rodríguez, Pablo', 'edad' => 21],
+            ['nombre' => 'Vereda Orozco, Gonzalo Jesús', 'edad' => 19],
+            ['nombre' => 'Vicaria García, Francisco Javier', 'edad' => 24],
+            ['nombre' => 'Vilar Martín, Blas', 'edad' => 18],
+            ['nombre' => 'Villegas Rivera, Luis', 'edad' => 20],
+            ['nombre' => 'García López, Pilar', 'edad' => 19],
         ];
+
         $grupo = 'Segundo de Desarrollo de Aplicaciones Web A';
 
+        return view('array', [
+            'grupo' => $grupo,
+            'alumnos' => $alumnos,
+            'profesor' => 'Carmelo Vega'
+        ]);
     }
-
-
-
 
     function index()
     {
