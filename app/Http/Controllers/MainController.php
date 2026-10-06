@@ -2,16 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class MainController extends Controller
 {
+<<<<<<< HEAD
+    public function index()
+    {
+        return view('index');
+    }
+
+    public function about()
+=======
     function about()
+>>>>>>> refs/remotes/origin/main
     {
         return view('about');
     }
 
+<<<<<<< HEAD
     function array()
+=======
+<<<<<<< HEAD
+    public function aboutMetodo()
+    {
+        return view('about');
+    }
+}
+=======
+    function array(): View
+>>>>>>> refs/remotes/origin/main
     {
         $array = array();
         $array = [];
@@ -67,4 +85,9 @@ class MainController extends Controller
     {
         return view('portfolio');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main

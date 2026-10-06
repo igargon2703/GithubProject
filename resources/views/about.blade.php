@@ -1,11 +1,10 @@
-@extends('template.base')
+@extends('base')
 
-@section('title')
-Github Project
-@endsection
+@section('title', 'About')
 
 @section('content')
-<div class="container d-flex align-items-center flex-column">
-    <h1>About</h1>
-</div>
+    <div class="container py-5">
+        <h1>About</h1>
+        <p>Esta es la página About.</p>
+    </div>
 @endsection
