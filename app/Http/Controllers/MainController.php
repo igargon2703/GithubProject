@@ -4,32 +4,28 @@ namespace App\Http\Controllers;
 
 class MainController extends Controller
 {
-<<<<<<< HEAD
     public function index()
     {
         return view('index');
     }
 
-    public function about()
-=======
+    public function about() {
+
     function about()
->>>>>>> refs/remotes/origin/main
     {
         return view('about');
     }
+    }
 
-<<<<<<< HEAD
-    function array()
-=======
-<<<<<<< HEAD
+
+
     public function aboutMetodo()
     {
         return view('about');
     }
 }
-=======
-    function array(): View
->>>>>>> refs/remotes/origin/main
+
+    function arrays(): View
     {
         $array = array();
         $array = [];
@@ -74,7 +70,7 @@ class MainController extends Controller
             'alumnos' => $alumnos,
             'profesor' => 'Carmelo Vega'
         ]);
-    }
+    };
 
     function index()
     {
@@ -85,9 +81,3 @@ class MainController extends Controller
     {
         return view('portfolio');
     }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> refs/remotes/origin/main
->>>>>>> refs/remotes/origin/main
