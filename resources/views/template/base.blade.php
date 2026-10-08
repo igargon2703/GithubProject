@@ -29,16 +29,8 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('aboutNombre') }}">About 1</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://ieszaidinvergeles.org">IES ZV</a></li>
-<<<<<<< HEAD
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('PortfolioRuta') }}">PortFolio</a></li>
-=======
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('portfolio') }}">PortFolio</a></li>
-<<<<<<< HEAD
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('array') }}">Array</a></li>
-=======
->>>>>>> refs/remotes/origin/main
-                        <!--<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{ { action([App\Http\Controllers::class, 'aboutMetodo'] ) } }">About 3</a></li>-->
->>>>>>> refs/remotes/origin/main
                     </ul>
                 </div>
             </div>
