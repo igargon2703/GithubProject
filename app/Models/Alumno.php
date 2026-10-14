@@ -10,7 +10,7 @@ class Alumno extends Model
     //el nombre del ORM de Laravel es Eloquent
 
     //nombre de la tabla
-    protected $table = 'alumno';
+    protected $table = 'alumnos';
     
     //campos que hay que rellenar antes de guardar un objeto en la base de datos    
     protected $fillable = ['nombre', 'apellidos', 'fnac', 'genero', 'nacceso'];

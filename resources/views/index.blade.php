@@ -1,28 +1,26 @@
 @extends('template.base')
 
-
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 mx-auto">
-            <table class="table table-hove">
+    <h1>Lista de alumnos</h1>
+    <h2>{{ $grupo }}</h2>
+    <p>Profesor: {{ $profesor }}</p>
 
-                @foreach($alumnos as $alumno)
-                    <tr>
-                        <td>{{$alumno->id}}</td>
-                        <td>{{$alumno->nombre}}</td>
-                        <td>{{$alumno->apellidos}}</td>
-                        <td>{{$alumno->nacceso}}</td>
-                        <td>{{$alumno->genero}}</td>
-                        <td>{{Carbon / Carbon::parse($alumno->fnac)->locale('es')->translatedFormat('d/m/Y')}}</td>
-                @endforeach
-                    <td> <a href="{{route('index')}}" class="btn btn-secondary">View</a></td>
-                    <td> <a href="{{route('index')}}" class="btn btn-secondary">Edit</a></td>
-                    <td> <a href="{{route('index')}}" class="btn btn-secondary">Delete</a></td>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($alumnos as $alumno)
+                <tr>
+                    <td>{{ $alumno['nombre'] }}</td>
+                    <td>{{ $alumno['edad'] }}</td>
                 </tr>
-
-                </tr>
-            </table>
-        </div>
-    </div>
+            @endforeach
+        </tbody>
+    </table>
 </div>
+@endsection

@@ -27,11 +27,9 @@ class AlumnoController extends Controller
 
     public function index(): View
     {
-        
-        return view('index', []);
-        //$alumnos = 'select * from alumno';
         $alumnos = Alumno::all();
-    }
+        return view('index', []);
+        }
 
 
     public function show(Alumno $alumno): View

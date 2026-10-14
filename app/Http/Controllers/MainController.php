@@ -1,42 +1,31 @@
 <?php
-
 namespace App\Http\Controllers;
+
+use App\Models\Alumno;
+use Illuminate\View\View;
 
 class MainController extends Controller
 {
-    public function index()
+    public function index(): View
     {
-        return view('index');
-    }
+        $alumnos = Alumno::all();
 
-    public function about() {
-
-    function about()
-    {
-        return view('about');
-    }
+        return view('index', ['alumnos' => $alumnos]);
     }
 
 
-
-    public function aboutMetodo()
+    public function about(): View
     {
         return view('about');
     }
-}
 
-    function arrays(): View
+    public function aboutMetodo(): View
     {
-        $array = array();
-        $array = [];
+        return view('about');
+    }
 
-        $array2 = 'Juan';
-        $array2 = 'Pepe';
-        $array2 = 'Maria';
-        $array2 = 'Maria';
-
-        $array3 = ['Juan', 'Pepe', 'Maria'];
-
+    public function array(): View
+    {
         $alumnos = [
             ['nombre' => 'Ajarif Saika, Fátima', 'edad' => 20],
             ['nombre' => 'Albarrán Joya, Antonio', 'edad' => 21],
@@ -70,14 +59,10 @@ class MainController extends Controller
             'alumnos' => $alumnos,
             'profesor' => 'Carmelo Vega'
         ]);
-    };
-
-    function index()
-    {
-        return view('index');
     }
 
-    function portfolio()
+    public function portfolio(): View
     {
         return view('portfolio');
     }
+}
