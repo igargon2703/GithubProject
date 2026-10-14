@@ -13,7 +13,7 @@ class AlumnoController extends Controller
     {
         return view('alumno.create', []);
     }
-    
+
     public function destroy(Alumno $alumno): RedirectResponse
     {
         return redirect()->route('index');
@@ -27,21 +27,26 @@ class AlumnoController extends Controller
 
     public function index(): View
     {
+        
         return view('index', []);
-
+        //$alumnos = 'select * from alumno';
+        $alumnos = Alumno::all();
     }
+
 
     public function show(Alumno $alumno): View
     {
-        return view('index', []);
+        return view('alumno.show', ['alumno'=>$alumno]);
     }
+
 
     /*public function store(Request $request): RedirectResponse
     {
         return redirect()->route('index');
     }*/
 
-    function store(Request $request) {
+    function store(Request $request)
+    {
         //dd($request->all());
         $alumno = new Alumno();
         $alumno->nombre = $request->nombre;

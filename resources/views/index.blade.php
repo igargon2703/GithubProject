@@ -1,22 +1,28 @@
 @extends('template.base')
 
-@section('title')
-Github Project
-@endsection
 
 @section('content')
-<div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="{{asset('assets/img/avataaars.svg')}}" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
-            </div>
-@endsection
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <table class="table table-hove">
+
+                @foreach($alumnos as $alumno)
+                    <tr>
+                        <td>{{$alumno->id}}</td>
+                        <td>{{$alumno->nombre}}</td>
+                        <td>{{$alumno->apellidos}}</td>
+                        <td>{{$alumno->nacceso}}</td>
+                        <td>{{$alumno->genero}}</td>
+                        <td>{{Carbon / Carbon::parse($alumno->fnac)->locale('es')->translatedFormat('d/m/Y')}}</td>
+                @endforeach
+                    <td> <a href="{{route('index')}}" class="btn btn-secondary">View</a></td>
+                    <td> <a href="{{route('index')}}" class="btn btn-secondary">Edit</a></td>
+                    <td> <a href="{{route('index')}}" class="btn btn-secondary">Delete</a></td>
+                </tr>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
